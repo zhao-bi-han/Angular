@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="studentList">
+<head>
+	<title>学生信息列表</title>
+	<meta charset="utf-8">
+   <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" />
+   <link rel="stylesheet" type="text/css" href="my.css">
+   <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-resource.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="index_module.js"></script>
+	<script type="text/javascript" src="index_config.js"></script>
+	<script type="text/javascript" src="core/student_service.js"></script>
+	<script type="text/javascript" src="student_list/student_list_module.js"></script>
+	<script type="text/javascript" src="student_list/student_list_component.js"></script>
+	<script type="text/javascript" src="student_list/student_list_controller.js"></script>
+	<script type="text/javascript" src="student_detail/student_detail_module.js"></script>
+	<script type="text/javascript" src="student_detail/student_detail_component.js"></script>
+	<script type="text/javascript" src="student_detail/student_detail_controller.js"></script>
+
+</head>
+<body >
+      <div ng-view></div>  
+</body>
+</html>

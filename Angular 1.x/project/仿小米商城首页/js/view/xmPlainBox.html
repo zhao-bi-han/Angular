@@ -1,0 +1,24 @@
+<div>
+	<h2>小米明星单品</h2>
+	<div class="box-right">
+		<a href="javascript:;" ng-mousedown="left_move()" ng-mouseup="start_move()">
+			<i class="iconfont icon-xiangzuo" ng-class="{active:flag}"></i>
+		</a>
+		<a href="javascript:;" ng-mousedown="right_move()" ng-mouseup="start_move()">
+			<i class="iconfont icon-xiangyou" ng-class="{active:!flag}"></i>
+		</a>
+	</div>
+	<div class="xm-box">
+		<ul class="clearfix" ng-class="{true:'move_left',false:'move_right'}[flag]">
+			<li ng-repeat="boxproduct in boxProducts | limitTo:10" class="boxItem_{{$index}}">
+				<a href="">
+					<img ng-src="img/products/{{boxproduct.img}}.jpg">
+					<p class="boxname">{{boxproduct.name}}</p>
+					<p class="boxtext">{{boxproduct.text}}</p>
+					<p class="boxprice">{{boxproduct.price}}元</p>
+				</a>
+			</li>
+	</ul>
+</div>
+</div>
+

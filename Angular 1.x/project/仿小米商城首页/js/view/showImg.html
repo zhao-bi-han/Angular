@@ -1,0 +1,6 @@
+<a href="#">
+	<img ng-src="img/{{image.name}}.jpg" ng-repeat="image in showImages" class="animated fadeIn " ng-if="image.id==i" id="img" img-id="image.id">
+	<ul>
+	<li ng-class="{bg_color:$index==i}" ng-click="imgshow($index)" ng-repeat="index in liList"></li>
+	</ul>
+</a> 

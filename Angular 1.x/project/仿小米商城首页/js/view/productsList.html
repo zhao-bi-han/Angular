@@ -1,0 +1,36 @@
+<div class="homeelec" >
+	<div class="box-bh">
+		<h2>{{listclassify.name}}</h2>
+		<ul>
+			<li  ng-repeat="classifyChild in listclassify.classify " ng-mouseover="proShow($index)" list-child="listclassify.classify">
+				<a href="javascript:;" ng-class="{active:active==$index}">{{classifyChild.name}}</a></li>
+			</ul>
+		</div>
+		<div class="box-bd clearfix">
+			<div class="box-bd-left ">
+				<ul class="clearfix">
+					<li ng-repeat="img in listclassify.img">
+						<a href="javascript:;">
+							<img ng-src="img/products/{{img}}.jpg" class="img_{{listclassify.classifyId}}">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="box-bd-right ">
+				<ul class="clearfix" ng-repeat="classifyChild in listclassify.classify" ng-show="active==$index">
+					<li ng-repeat="boxProduct in listArray| filter:{childId:active+1}" show-info ng-mousemove="show()" ng-mouseleave="hide()">
+					<a ui-sref="home.product({id:boxProduct.productId})">
+						<img ng-src="img/products/{{boxProduct.img}}.jpg">
+						<p class="proname">{{boxProduct.name}}</p>
+						<p class="protext" ng-if="boxProduct.text">{{boxProduct.text}}</p>
+						<p class="proprice">{{boxProduct.price}}元</p>
+						<p class="procomment" ng-if="boxProduct.comment">{{boxProduct.comment}}</p>
+						<div class="show" ng-class="{showup:flag}">
+							<span>我对小米的爱天地可鉴，小米妹子敢不敢回复我的一片真心。</span>
+						</div>
+					</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>

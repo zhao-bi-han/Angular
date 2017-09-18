@@ -1,0 +1,80 @@
+<div class="container">
+	<div class="middle">
+		<div class="middle-menu">
+			<my-nav item-ul="itemMenu" nav-child-product="menuProduct" type="menu" nav-class="nonav"></my-nav>
+		</div>
+		<div class="middle-img">			
+			<show-img show-images="images"></show-img>
+		</div>
+	</div>
+	<div class="home_hero clearfix">
+		<div class="home_hero_left">
+			<ul class="clearfix">
+				<li>
+					<a href="#">
+						<i class="iconfont icon-shouji"></i>选购手机
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont icon-liwu2"></i>企业团购
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont icon-lanmaofenleiyiyuangou"></i>
+						一元活动
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont icon-shoujiqia"></i>
+						小米移动
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont icon-huanyihuan"></i>
+						已旧换新
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="iconfont icon-yinxingqia"></i>
+						话费充值
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="home_hero_right">
+			<ul class="clearfix">
+				<li>
+					<a href="#">
+						<img src="img/xmad_14987863617521_eVRJk.jpg">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/xmad_14984572731273_CcmqE.jpg">
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/xmad_14981304223049_fEnlQ.jpg">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="xm-plain-box">
+		<xm-plain-box box-products="boxProducts" ></xm-plain-box>
+	</div>
+</div>
+<div class="products_list">
+	<div class="container">
+		<products-list ng-repeat="listclassify in listClassifys ">
+		</products-list>
+
+		<hot-content></hot-content>
+	</div>
+</div>

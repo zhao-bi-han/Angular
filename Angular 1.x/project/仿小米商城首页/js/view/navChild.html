@@ -1,0 +1,25 @@
+<div class="navchild" ng-mouseover="show()" ng-mouseleave="hide()">
+	<a href="javascript:;">{{parentItem.text}}</a>
+	<div class="child-centent" ng-show="flag" ng-if="productArray.length"  ng-switch="navClass==='isnav'" ng-class="getClass()">
+	<div class="container" ng-switch-when="true">
+		<ul>
+			<li ng-repeat="product in navChildProduct | filter:{'fl_id':parentItem.id}">
+			   <a ui-sref="home.product({id:product.productId})" ng-click="hide()">
+			   	<img ng-src="img/product/{{product.img}}" class="navimg">
+				<p>{{product.name}}</p>
+				<p>{{product.price}}元起</p>
+			   </a>				
+			</li>
+		</ul>
+	</div>
+		<ul ng-switch-when="false" ng-repeat="pageN in productList" class="menu_ul">
+		<li ng-repeat="product in productArray  | productFil:pageN" >
+			<a ui-sref="home.product({id:product.productId})">
+				<img ng-src="img/product/{{product.img}}.jpg">
+				<span>{{product.name}}</span>
+			</a>
+			<a href="#"  id="xg" ng-if="parentItem.id==1">选购</a>
+		</li>
+		</ul>
+	</div>
+</div>

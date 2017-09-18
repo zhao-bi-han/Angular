@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/list grid.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+   <div ng-controller="myCtrl">
+   	  <div class="top">
+   	  <!-- {active:layout=='list'} 这是一个判断语句 为true添加active样式-->
+   	  	<a href="#" ng-class="{active:layout=='list'}" ng-click="layout='list'" class="list-icon"></a>
+   	  	<a href="#" ng-class="{active:layout=='grid'}" ng-click="layout='grid'" class="grid-icon"></a>
+   	  </div>
+   	  <ul class="content list" ng-show="layout=='list'">
+   	  	  <li ng-repeat="list in data">
+   	  	  	<a href="{{list.url}}">
+   	  	  		<img ng-src="img/{{list.image}}">
+   	  	  		<span>{{list.title}}</span>
+   	  	  	</a>
+   	  	  </li>
+   	  </ul>
+   	  <ul class="content grid" ng-show="layout=='grid'">
+   	     <li ng-repeat="grid in data">
+   	     <a href="{{grid.url}}">
+   	     	<img ng-src="img/{{grid.image}}">
+   	     	</a>
+   	     </li>
+   	  </ul>
+   </div>
+   <script type="text/javascript">
+   	var app=angular.module('myApp',[]);
+   	app.controller('myCtrl',function($scope,$http){
+   		$scope.layout='list';
+       $http.post('json/list grid.json').then(function(text){
+       	$scope.data=text.data.res;
+       })
+   	});
+   </script>
+</body>
+</html>

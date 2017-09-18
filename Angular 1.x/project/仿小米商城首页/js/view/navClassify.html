@@ -1,0 +1,7 @@
+<div class="mynav">
+	<ul>
+		<li ng-repeat="item in itemUl | filter:{isNav:typeSeq}">
+				<my-nav-child parent-item="item" nav-child-product="navChildProduct" nav-class="{{navClass}}"></my-nav-child>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,59 @@
+
+.top{
+    width:100%;
+    height: 60px;
+    background-color: #555454;
+}
+.comwidth{
+    width: 800px;
+    margin:0 auto;
+}
+.top  h1{
+    display: inline-block;
+    line-height:60px;
+    color:#F5F3F3;
+    vertical-align: middle;
+}
+.top  input{
+    width: 300px;
+    border:1px solid #e5e5e5;
+    height:30px;
+    border-radius:5px;
+   float: right;
+   margin-top: 14px;
+   outline: none;
+   padding-left:10px;
+}
+.list h2{
+    margin-top:20px;
+}
+.list ul{
+    margin-top:20px;
+}
+.list li{
+    list-style:none;
+    width:100%;
+    height: 30px;
+    border-left:2px solid #05925C;
+    line-height: 30px;
+   background-color: #fff;
+    margin-top:10px;
+    padding:2px 20px;
+    font-size: 14px;
+}
+.list li a{
+    display: inline-block;
+    height: 20px;
+    width:30px;
+    float: right;
+    margin-top:4px; 
+    background: url("/assets/image/remove.png") center center no-repeat ;
+    background-size: 80%;
+    padding: 2px 0;
+}
+.list li input[type=checkbox]{
+    width:16px;
+    height:16px;
+    vertical-align:middle;
+    margin-top: -3px;
+}

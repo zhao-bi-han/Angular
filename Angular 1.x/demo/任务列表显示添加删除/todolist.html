@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/todolist.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="myCtrl">
+  	<h2>我的任务列表</h2>
+  	<form ng-submit="addTask()" class="form">
+  		<input type="text" ng-model="taskText"  placeholder="添加新任务">
+  	</form>
+  	<ul>
+  		<li ng-repeat="x in taskList">
+  		    <input type="checkbox" ng-model="x.done">
+  			<span ng-class="{focus:x.done}">{{x.taskText}}</span>
+  			<span>
+  			   {{x.time}}
+  			   <a href="javascript:;" ng-click="remove(x)"> 删除</a>
+  			</span>
+
+  		</li>
+  	</ul>
+  	<div>
+  		<span>已完成：{{num().wc}}</span>
+  		<span>未完成：{{num().yc}}</span>
+  		<span>总数：{{num().zs}}</span>
+  	</div>
+  </div>
+  <script type="text/javascript">
+  	var app=angular.module('myApp',[]);
+  	app.controller('myCtrl',function($scope,dateFilter){
+  		var tmp=localStorage.getItem('taskList');
+  		//fromJson 把一个json字符串转成一个对象 
+  		$scope.taskList=tmp?angular.fromJson(tmp):[];
+
+
+  		$scope.addTask=function(){
+           $scope.taskList.push({
+           	'id':$scope.taskList.length+1,
+           	'taskText':$scope.taskText,
+           	'done':false,
+           	'time':getTime()
+           });
+           $scope.taskText='';
+           $scope.save();
+
+  		}
+  		//删除数据
+        $scope.remove=function(x){
+           $scope.taskList.splice($scope.taskList.indexOf(x),1);
+           $scope.save();	
+        }
+        //任务数量
+        $scope.num=function(){
+        	var wc=0;
+        	var yc=0;
+        	var zs=$scope.taskList;
+        	angular.forEach(zs,function(index){
+        		index.done? wc++ : yc++;
+        	});
+        	return {'wc':wc,'yc':yc,'zs':zs.length};
+
+        }
+
+         //将数据保存到本地
+         $scope.save=function(){
+         	// toJson 把对象转换成json字符串
+         	localStorage.setItem('taskList',angular.toJson($scope.taskList));
+         }
+        //得到当前时间
+  		function getTime(){
+  			return dateFilter(new Date(),'yyyy-MM-dd HH:mm:ss');
+  		}
+  	});
+  </script>
+</body>
+</html>

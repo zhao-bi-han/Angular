@@ -1,0 +1,17 @@
+<div class="search">
+	<div class="search_centent">
+	    <input type="button" name="" value="搜索" >
+		<input type="text" name="" ng-model="search" placeholder="小米手机Max5" id="input">
+	</div>
+	<div class="search_list" ng-if="search">
+		<ul>
+			<li ng-repeat="searchItem in searchItems | filter:search | limitTo:12" >
+			<a href="#" click-li>
+				<span>{{searchItem.name}}</span>
+				<!-- <span>约有{{searchItem.number}}件</span> -->
+			</a>
+			
+			</li>
+		</ul>
+	</div>
+</div>

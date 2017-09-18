@@ -1,0 +1,9 @@
+angular.module('myRouter',[]).
+   config(function($stateProvider,$urlRouterProvider){
+   	$urlRouterProvider.otherwise('/');
+   	$stateProvider.state('login',{
+   		url:'/',
+   		templateUrl:'login.html',
+   		controller:'loginCtrl'
+   	});
+   });

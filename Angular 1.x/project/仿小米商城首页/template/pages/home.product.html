@@ -1,0 +1,38 @@
+<div class="product-head" ng-class="{'fixed-head':flag}" ng-if="productInfo.img">
+	<div class="container" >
+		<h2>{{product.name}}</h2>
+		<div class="product-head-right">
+			<ul>
+				<li>
+				<a href="javscript:;" class="active">概述</a><span>|</span>
+				</li>
+				<li>
+					<a href="javscript:;">参数</a><span>|</span>
+				</li>
+				<li>
+					<a href="javscript:;">安装服务</a><span>|</span>
+				</li>
+				<li>
+					<a href="javscript:;">用户评价</a>
+				</li>
+				<li>
+					<a href="javascript:;">立即购买</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="product-info" ng-if="productInfo.img">
+	<img ng-src="img/products/{{imgname}}" ng-repeat="imgname in productInfo.img">
+</div>
+
+<div class="info-error" ng-if="!productInfo.img">
+<div class="info">
+	<h1>Sorry !</h1>
+	<h2>系统数据正在完善中!</h2>
+	<a ui-sref="home.main">返回</a>
+	<a ui-sref="home.main">首页</a>
+</div>
+
+</div>

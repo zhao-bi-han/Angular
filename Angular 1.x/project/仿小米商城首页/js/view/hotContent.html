@@ -1,0 +1,99 @@
+<div>
+	<div class="hotproduct">
+		<div class="hot-bh">
+			<h2>热评产品</h2>
+		</div>
+		<div class="hot-bd">
+			<ul class="clearfix">
+				<li>
+					<a href="javscript:;">
+						<img ng-src="img/hot1.jpg">
+						<p class="review">刚收到，外观很漂亮，颜色也很喜欢，等了好长时间了，终于拿到了，非常满意，棒棒哒！！！</p>
+					</a>
+					<p class="author">来自于 HZG 的评价</p>
+					<div class="info">
+						<h3>米家压力IH电饭煲</h3>
+						<span>|</span>
+						<p>999元</p>
+					</div>
+				</li>
+				<li>
+					<a href="javscript:;">
+						<img ng-src="img/hot2.jpg">
+						<p class="review">很小巧 像不喜欢戴活塞的人可以试试这种~很舒服包装还是一如既往的简洁 要是有盒子就好了=￣ω￣=</p>
+					</a>
+					<p class="author">来自于 sddyboy 的评价</p>
+					<div class="info">
+						<h3>小米空气净化器2 </h3>
+						<span>|</span>
+						<p>669元</p>
+					</div>
+				</li>
+				<li>
+					<a href="javscript:;">
+						<img ng-src="img/hot3.jpg">
+						<p class="review">包装很让人感动，式样也很可爱，做出的饭全家人都爱吃，超爱五星！手机控制还是不太熟练，最主要是没有连接...</p>
+					</a>
+					<p class="author">来自于 龙炎 的评价</p>
+					<div class="info">
+						<h3>小米笔记本Air 12.5英寸</h3>
+						<span>|</span>
+						<p>3499元</p>
+					</div>
+				</li>
+				<li>
+					<a href="javscript:;">
+						<img ng-src="img/hot4.jpg">
+						<p class="review">东西真心不错，用过最好用的插线板，做工外观没得挑剔，3个USB接口很实用，充电快，建议不包邮的应该在...</p>
+					</a>
+					<p class="author">来自于 鹤唳 的评价</p>
+					<div class="info">
+						<h3>小米胶囊耳机 </h3>
+						<span>|</span>
+						<p>69元</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="content-bh">
+			<h2>内容</h2>
+		</div>
+		<div class="content-bd">
+			<ul class="clearfix">
+				<li ng-repeat="content in contents" move-step ng-mouseover="show()" ng-mouseleave="hide()" class="top_{{content.id}}">
+					<h2>{{content.name}}</h2>
+					<div class="my-carousel">
+						<ul class="clearfix">
+							<li ng-repeat="text in content.text">
+								<a href="javscript:;">
+									<h4 ng-if="text.textName">{{text.textName}}</h4>
+									<p class="textContent">{{text.textContent}} </p>
+									<p class="price">{{text.price}}</p>
+									<a href="javscript:;" ng-if="text.more" class="more more_{{content.id}}">{{text.more}}</a>
+									<img ng-src="img/{{text.img}}">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="my-pagers">
+						<ul class="clearfix">
+							<li ng-click="step(0)" class="radius"></li>
+							<li ng-click="step(1)"></li>
+							<li ng-click="step(2)"></li>
+						</ul>
+					</div>
+					<div class="my-control" ng-if="flag">
+						<a href="javascript:;" class="control-left" ng-click="left()">
+							<i class="iconfont icon-xiangzuo"></i>
+						</a>
+						<a href="javascript:;" class="control-right" ng-click="right()">
+							<i class="iconfont icon-xiangyou"></i>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

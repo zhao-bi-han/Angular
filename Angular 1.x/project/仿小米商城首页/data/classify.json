@@ -1,0 +1,106 @@
+{
+
+	"classify":[
+  {"id":"1","text":"小米手机","isNav":1},
+  {"id":"2","text":"红米","isNav":1},
+  {"id":"3","text":"平板","isNav":1},
+  {"id":"4","text":"电视","isNav":1},
+  {"id":"5","text":"盒子","isNav":1},
+  {"id":"6","text":"路由器","isNav":1},
+  {"id":"7","text":"智能硬件","isNav":1},
+  {"id":"8","text":"电话卡","isNav":0},
+  {"id":"9","text":"移动电源","isNav":0},
+  {"id":"10","text":"插线板","isNav":0},
+  {"id":"11","text":"耳机","isNav":0},
+  {"id":"12","text":"音箱","isNav":0},
+  {"id":"13","text":"电池","isNav":0},
+  {"id":"14","text":"存储卡","isNav":0},
+  {"id":"15","text":"保护套","isNav":0},
+  {"id":"16","text":"后盖","isNav":0},
+  {"id":"17","text":"贴膜","isNav":0},
+  {"id":"18","text":"其他配件","isNav":0},
+  {"id":"19","text":"米兔","isNav":0},
+  {"id":"20","text":"服装?","isNav":0},
+  {"id":"21","text":"箱包","isNav":0},
+  {"id":"22","text":"其他周边","isNav":0}
+
+  ],
+  "classifyMenu":
+   [
+         {"id":"1","text":"小米手机 平板 电话卡","isNav":0},
+         {"id":"2","text":"电视 盒子","isNav":0},
+         {"id":"3","text":"路由器 智能硬件","isNav":0},
+         {"id":"4","text":"移动电源 插线板","isNav":0},
+         {"id":"5","text":"耳机 音箱","isNav":0},
+         {"id":"6","text":"电池 存储卡","isNav":0},
+         {"id":"7","text":"保护套 后盖","isNav":0},
+         {"id":"8","text":"贴膜 其他配件","isNav":0},
+         {"id":"9","text":"米兔 服装","isNav":0},
+         {"id":"10","text":"箱包 其他周边","isNav":0}
+  ],
+  "show_img":
+  [
+  {"id":"0","name":"bg1"},
+  {"id":"1","name":"bg2"},
+  {"id":"2","name":"bg3"},
+  {"id":"3","name":"bg4"},
+  {"id":"4","name":"bg5"}
+  ],
+  "xm_plain":[
+  {"id":"1","productId":"1"},
+  {"id":"2","productId":"2"},
+  {"id":"3","productId":"4"},
+  {"id":"4","productId":"8"},
+  {"id":"5","productId":"11"},
+  {"id":"6","productId":"15"},
+  {"id":"7","productId":"16"},
+  {"id":"8","productId":"18"},
+  {"id":"9","productId":"25"},
+  {"id":"10","productId":"28"}
+  ],
+
+  "listClassify":[
+  {
+    "classifyId":1,
+    "name":"家电",
+    "classify":[
+         {"childId":1,"name":"热门"},
+         {"childId":2,"name":"电视影音"},
+         {"childId":3,"name":"电脑"},
+         {"childId":4,"name":"家居"}
+    
+     ],
+     "img":["d78fc81d-8713-43fe-8387-17f31b4b0745"]
+  },
+  {
+   "classifyId":2,
+   "name":"智能",
+   "classify":[
+         {"childId":1,"name":"热门"},
+         {"childId":2,"name":"出行"},
+         {"childId":3,"name":"健康"},
+         {"childId":4,"name":"酷玩"},
+         {"childId":5,"name":"路由器"}
+
+   ],
+   "img":["xmad_14967432043621_gmlxi","xmad_14973351914778_MvWwt"]
+
+  },
+  {
+  "classifyId":3,
+   "name":"搭配",
+   "classify":[
+         {"childId":1,"name":"热门"},
+         {"childId":2,"name":"耳机音箱"},
+         {"childId":3,"name":"电源"},
+         {"childId":4,"name":"电池存储卡"}
+
+   ],
+   "img":["xmad_14994014807425_VijLG","xmad_14984462064729_IKEOD"]
+
+  }
+
+  ] 
+}
+
+

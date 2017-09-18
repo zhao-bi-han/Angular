@@ -1,0 +1,11 @@
+angular.module('studentList')
+    .config(function($routeProvider){
+         $routeProvider.when('/student',{
+         	//调用的模板是自己定义的指令
+             template:'<student_list></student_list>'
+         }).when('/student/:id',{
+         	template:'<student_detail></student_detail>'
+         }).otherwise({
+         	redirectTo:'/student'
+         }) 
+    });

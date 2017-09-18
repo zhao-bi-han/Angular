@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/tab.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+<div ng-controller="myCtrl">
+	<nav class="{{active}}" ng-init="active='a1'" ng-click="$event.stopPropagation">
+		<a href="#" class="a1" ng-click="active='a1'">百度</a>
+		<a href="#" class="a2" ng-click="active='a2'">搜狗</a>
+		<a href="#" class="a3" ng-click="active='a3'">淘宝</a>
+		<a href="#" class="a4" ng-click="active='a4'">京东</a>
+	</nav>
+	<div ng-show="active=='a1'">
+		<ul>
+			<li ng-repeat="a1 in res.a1">
+				<a href="{{a1.url}}">{{a1.title}}</a>
+			</li>
+		</ul>
+	</div>
+	<div ng-show="active=='a2'">
+		<ul>
+			<li ng-repeat="a2 in res.a2">
+				<a href="{{a2.url}}">{{a2.title}}</a>
+			</li>
+		</ul>
+	</div>
+	<div ng-show="active=='a3'">
+		<ul>
+			<li ng-repeat="a3 in res.a3">
+				<a href="{{a3.url}}">{{a3.title}}</a>
+			</li>
+		</ul>
+	</div>
+	<div ng-show="active=='a4'">
+		<ul>
+			<li ng-repeat="a4 in res.a4">
+				<a href="{{a4.url}}">{{a4.title}}</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	var app=angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope,$http){
+        $http.post('json/tab.json').then(function(text){
+           $scope.res=text.data;
+        })
+	})
+</script>
+</body>
+</html>
